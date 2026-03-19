@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEDxAJCE 2025 | ASCENT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Cinematic Gradients & Film Grain -->
+  <div class="bg-layer"></div>
+
+  <!-- Particle Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Particle Foreground (Renders Saturn ring ON TOP of cards) -->
+  <canvas id="particle-canvas-front"></canvas>
+
+  <div class="main-container">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="tedx">TEDx</span>AJCE
+    </div>
+    <ul class="navlinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#tickets">Tickets</a></li>
+    </ul>
+    <button class="nav-btn">Register</button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2 class="date-badge">May 2, 2026</h2>
+      <h1 class="hero-title">
+        ORIGIN<span>:</span><br>
+        <span class="outline-text">Begin Where it Matters</span>
+      </h1>
+      <p class="hero-sub">
+        Join us at Amal Jyothi College of Engineering for a day of innovation, perseverance, and ideas that shape the
+        future.
+      </p>
+      <button class="primary-btn">Explore the Experience</button>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-container glass-panel">
+      <div class="about-left">
+        <h2>What is ASCENT?</h2>
+        <p>
+          TEDxAJCE 2025 brings the theme <strong>ASCENT</strong> to life. We explore the journey of overcoming
+          obstacles, achieving greatness, and understanding that every choice we make leaves a permanent mark on our
+          path.
+        </p>
+        <p>
+          Founded in 2018, TEDxAJCE is an independently organized event that creates a stage where innovation,
+          creativity, and intellectual curiosity meet to share ideas worth spreading.
+        </p>
+      </div>
+      <div class="about-right">
+        <div class="about-stat">
+          <h3>2025</h3>
+          <p>The Year</p>
+        </div>
+        <div class="about-stat">
+          <h3>6+</h3>
+          <p>Visionary Speakers</p>
+        </div>
+        <div class="about-stat">
+          <h3>Infinite</h3>
+          <p>Ideas Worth Spreading</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="roadmap">
+    <h2 class="section-title">The <span class="red-text">Journey</span> So Far</h2>
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item">
+        <div class="timeline-card-wrapper">
+          <div class="timeline-card glass-panel timeline-target">
+            <h3>TEDxAJCE 2023</h3>
+            <p>Igniting Minds: The inception of our journey.</p>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-card-wrapper empty"></div>
+      </div>
+
+      <div class="timeline-item reverse">
+        <div class="timeline-card-wrapper">
+          <div class="timeline-card glass-panel timeline-target">
+            <h3>TEDxAJCE 2024</h3>
+            <p>Beyond Horizons: Expanding the boundaries of thought.</p>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-card-wrapper empty"></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-card-wrapper">
+          <div class="timeline-card glass-panel timeline-target">
+            <h3>TEDxAJCE 2025</h3>
+            <p>Ascent: Every step leaves a mark.</p>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-card-wrapper empty"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPEAKERS SECTION — TRUE 3D CAROUSEL -->
+  <section id="speakers" class="speakers">
+    <h2 class="section-title">The <span class="red-text">Voices</span> of Ascent</h2>
+
+    <div class="sc-wrapper">
+      <!-- 3D stage — JS rotates this via rotateY on each item directly -->
+      <div class="sc-stage" id="sc-stage">
+
+        <div class="sc-item glass-panel" data-idx="0" data-name="GEO JOSEPH">
+          <div class="sc-avatar">
+            <img src="assets/geo.png" alt="Geo Joseph" loading="lazy">
+          </div>
+          <h3>Geo Joseph</h3>
+          <p class="sc-role">Digital Content Creator</p>
+          <p class="sc-desc">Visionary creator behind M4 Tech, inspiring millions through innovation.</p>
+        </div>
+
+        <div class="sc-item glass-panel" data-idx="1" data-name="JITHIN LAAL">
+          <div class="sc-avatar">
+            <img src="assets/jithin lal.png" alt="Jithin Laal" loading="lazy">
+          </div>
+          <h3>Jithin Laal</h3>
+          <p class="sc-role">Film Director</p>
+          <p class="sc-desc">Cinematic storyteller redefining boundaries in Malayalam cinema.</p>
+        </div>
+
+        <div class="sc-item glass-panel" data-idx="2" data-name="VINEETHA KOSHY">
+          <div class="sc-avatar">
+            <img src="assets/vinitha koshy.png" alt="Vineetha Koshy" loading="lazy">
+          </div>
+          <h3>Vineetha Koshy</h3>
+          <p class="sc-role">Actress &amp; Counselor</p>
+          <p class="sc-desc">An authentic voice in performance and mental health advocacy.</p>
+        </div>
+
+      </div><!-- /sc-stage -->
+
+      <!-- Frosted glass base below the active speaker -->
+      <div class="sc-glass-base">
+        <div class="sc-glass-inner"></div>
+        <div class="sc-glass-glow"></div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="sc-nav">
+        <button class="sc-btn" id="sc-prev">&#8592;</button>
+        <button class="sc-btn" id="sc-next">&#8594;</button>
+      </div>
+    </div><!-- /sc-wrapper -->
+  </section>
+
+  <!-- TICKETS -->
+  <section id="tickets" class="tickets">
+    <div class="ticket-card glass-panel">
+      <h2>Secure Your Spot</h2>
+      <div class="price">₹1180</div>
+      <ul class="perks">
+        <li>Full access to all TED-style talks</li>
+        <li>Interactive networking with speakers</li>
+        <li>Lunch, snacks, and refreshments included</li>
+        <li>Official TEDxAJCE Participation Certificate</li>
+        <li>Exclusive TEDx Merchandise</li>
+      </ul>
+      <button class="primary-btn pulse-glow">Buy Ticket Now</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="tedx">TEDx</span>AJCE
+      </div>
+      <p>This independent TEDx event is operated under license from TED.</p>
+      <p class="copyright">© 2025 TEDxAJCE</p>
+    </div>
+  </footer>
+
+  </div>
+
+  <script src="particle.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
